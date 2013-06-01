@@ -1,0 +1,36 @@
+{
+  "name": "inlinify",
+  "version": "0.0.0",
+  "description": "Inline functions in JavaScript",
+  "main": "inline.js",
+  "directories": {
+    "test": "test"
+  },
+  "dependencies": {
+    "falafel": "~0.2.1",
+    "tape": "~1.0.2"
+  },
+  "devDependencies": {},
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git://github.com/mikolalysenko/inlinify.git"
+  },
+  "keywords": [
+    "inline",
+    "falafel",
+    "static",
+    "analysis",
+    "macro",
+    "optimization"
+  ],
+  "author": "Mikola Lysenko",
+  "license": "MIT",
+  "readmeFilename": "README.md",
+  "gitHead": "3663ec2c0a359f7997f6a34a944c009ceb689af7",
+  "bugs": {
+    "url": "https://github.com/mikolalysenko/inlinify/issues"
+  }
+}
