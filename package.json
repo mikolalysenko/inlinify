@@ -7,10 +7,11 @@
     "test": "test"
   },
   "dependencies": {
-    "falafel": "~0.2.1",
+    "falafel": "~0.2.1"
+  },
+  "devDependencies": {
     "tape": "~1.0.2"
   },
-  "devDependencies": {},
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
   },
