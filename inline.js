@@ -75,7 +75,7 @@ function inline(func, inline_prefix, arg_names) {
         this_variables[x] = true
       }
     } else if(node.type === "ReturnStatement") {
-      node.update(return_variable+"="+node.argument.source().trim()+"; break __"+inline_prefix+"_return;\n")
+      node.update("{"+return_variable+"=("+node.argument.source().trim()+"); break __"+inline_prefix+"_return;}\n")
       has_return = true
     } else if(node.type === "ThisExpression") {
       if(!(node.parent.type === "MemberExpression" && !node.parent.computed)) {
@@ -93,7 +93,7 @@ function inline(func, inline_prefix, arg_names) {
   })
   
   if(has_return) {
-    result = "__" + inline_prefix + "_return: do " + result + " while(0)"
+    result = "__" + inline_prefix + "_return: do " + result + " while(0);"
   }
   
   return {
