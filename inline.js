@@ -34,7 +34,7 @@ function inline(func, inline_prefix, arg_names) {
   var orig_args = getArgs(src)
   var has_return = false
   var result = ""
-  var return_variable = "__" + inline_prefix + "return"
+  var return_variable = "_" + inline_prefix + "return"
   
   falafel(src, function(node) {
     var n, i, j, x
@@ -99,7 +99,7 @@ function inline(func, inline_prefix, arg_names) {
   return {
     variables: Object.keys(variables).map(function(s) { return inline_prefix + s }),
     this_variables: Object.keys(this_variables),
-    return_variable: "__" + inline_prefix + "return",
+    return_variable: return_variable,
     body: result
   }
 }
