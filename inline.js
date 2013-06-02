@@ -62,7 +62,8 @@ function inline(func, inline_prefix, arg_names) {
         node.update(x)
       } else if(node.parent.type === "LabeledStatement" ||
                 node.parent.type === "BreakStatement" ||
-                node.parent.type === "ContinueStatement") {
+                node.parent.type === "ContinueStatement" ||
+                node.parent.type === "FunctionExpression") {
         node.update(inline_prefix + node.source().trimLeft())
       } else {
         throw new Error("Unbound global or free variable: " + n)

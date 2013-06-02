@@ -19,9 +19,7 @@ console.log(inline(
 ))
 
 console.log(inline(
-  function() {
-    
-    console.log(arguments[0])
+  function named_func() {
     
   }, "test", []
 ))
